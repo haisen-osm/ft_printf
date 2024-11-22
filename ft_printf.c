@@ -6,7 +6,7 @@
 /*   By: okhourss <okhourss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:30:58 by okhourss          #+#    #+#             */
-/*   Updated: 2024/11/20 16:46:50 by okhourss         ###   ########.fr       */
+/*   Updated: 2024/11/21 22:57:52 by okhourss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_printf(const char *str, ...)
 
 	count = 0;
 	i = 0;
-	if (str == NULL || write(1, 0, 0) == -1)
+	if (str == NULL)
 		return (-1);
 	va_start(args, str);
 	while (str[i])

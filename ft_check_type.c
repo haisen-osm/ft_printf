@@ -6,7 +6,7 @@
 /*   By: okhourss <okhourss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 18:28:51 by okhourss          #+#    #+#             */
-/*   Updated: 2024/11/20 14:06:55 by okhourss         ###   ########.fr       */
+/*   Updated: 2024/11/21 21:30:48 by okhourss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	ft_check_specifier(char format, va_list args)
 		count += ft_print_u(va_arg(args, unsigned int));
 	else if (format == '%')
 		count += ft_putchar('%');
+	else
+		ft_putchar(format);
 	if (count < 0)
 		return (-1);
 	return (count);

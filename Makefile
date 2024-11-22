@@ -25,9 +25,10 @@ SRCS = ft_check_type.c ft_print_hexa.c ft_print_int.c ft_print_p.c \
 
 OBJS = ${SRCS:.c=.o}
 
+all: ${NAME}
+
 ${NAME}: ${OBJS}
 			ar rcs ${NAME} ${OBJS}
-all: ${NAME}
 
 %.o: %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
